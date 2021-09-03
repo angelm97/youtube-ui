@@ -1,0 +1,200 @@
+#content {
+  width: 100%;
+  min-height: 100%;
+  background: rgba(233, 233, 233, 0.303);
+  box-shadow: 0px 0px 13px rgba(133, 133, 133, 0.303) inset;
+  display: flex;
+  flex-flow: row;
+  padding: 0px 40px;
+  padding-top: 20px;
+}
+
+#video-coments {
+  flex-basis: 65%;
+}
+
+#video img {
+  min-width: 100%;
+  max-height: 130mm;
+}
+
+#video-info > h2{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#views-likes {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.frow {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.fright {
+  margin-left: auto;
+  order: 2;
+  opacity: 0.8;
+}
+
+.fright p {
+    font-size: 15px !important;
+    font-weight: 500;
+    
+}
+
+.fright svg {
+    cursor: pointer;
+    
+}
+
+.frow p,
+svg {
+  margin-right: 10px;
+}
+
+.frow p{
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+
+#user-perfil{
+    display: flex;
+    flex-flow: row ;
+    
+}
+
+.user img{
+    border-radius: 150px;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.user-name{
+    margin: 0px 10px;
+}
+
+.user-name h2, p{
+    font-size: 17px;
+}
+
+.user-name p{
+    font-size: 15px;
+}
+
+.c-gray{
+    opacity: 0.8;
+    font-size: 14px !important;
+}
+
+.subc button {
+    background: rgb(192, 4, 4);
+    color:white;
+    border: 0px solid transparent;
+    height: 10mm;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 30mm;
+    margin-top: 10px;
+    
+
+}
+
+.p-comm{
+    font-weight: 490;
+}
+
+.comment{
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 10px;
+}
+
+.comment .likes{
+    display: flex;
+    flex-flow: row;
+}
+
+#others-videos{
+    display: flex;
+    flex-flow: row;
+    margin: 15px 25px;
+    cursor: pointer;
+}
+
+.video-img img{
+    max-width: 42mm;
+    max-height: 25mm;
+    min-width: 42mm;
+    min-height: 25mm;
+    margin-right: 10px;
+}
+
+.video-img-info h2{
+font-size: 17px;
+}
+
+.video-img-info p{
+    font-size: 15px;
+    opacity: 0.8;
+    margin: 0px;
+}
+
+.comment p,
+svg {
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.comment
+svg {
+  cursor: pointer;
+}
+
+#descripcion-short{
+  display: none;
+}
+
+
+@media only screen and (max-width: 950px) {
+  #content {
+    flex-flow: column;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #content {
+    padding: 1px;
+  }
+
+  #video-info {
+    padding: 10px;
+  }
+
+  .fright{
+    margin: 0px;
+  }
+
+  #descripcion-short{
+    display: block;
+    margin-left: 10px;
+  }
+
+  #descripcion-long{
+    display: none;
+  }
+
+  .subc{
+    margin-left: auto;
+    order: 2;
+  }
+
+  
+}

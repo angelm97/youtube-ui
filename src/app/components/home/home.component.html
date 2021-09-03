@@ -1,0 +1,99 @@
+<div id="container">
+    <aside class="" id="aside">
+        <ul>
+            <li title="Home">
+                <div class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                    </svg>
+                    <h1>Home</h1>
+                </div>
+
+            </li>
+            <li>
+                <div class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-compass-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M15.5 8.516a7.5 7.5 0 1 1-9.462-7.24A1 1 0 0 1 7 0h2a1 1 0 0 1 .962 1.276 7.503 7.503 0 0 1 5.538 7.24zm-3.61-3.905L6.94 7.439 4.11 12.39l4.95-2.828 2.828-4.95z" />
+                    </svg>
+                    <h1>Explore</h1>
+                </div>
+
+            </li>
+            <li>
+                <div class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-collection-play-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437z" />
+                    </svg>
+                    <h1>Subscriptions</h1>
+                </div>
+
+            </li>
+            <li>
+                <div class="icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-collection-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z" />
+                    </svg>
+                    <h1>Library</h1>
+                </div>
+
+            </li>
+        </ul>
+    </aside>
+    <div class="menuFiltre">
+        <div class="buttoms">
+            <button title="All" (click)="filtre($event)"> All </button>
+            <button title="Mixes" (click)="filtre($event)"> Mixes </button>
+            <button title="Music" (click)="filtre($event)"> Music </button>
+            <button title="Cars" (click)="filtre($event)"> Cars </button>
+            <button title="Interviews" (click)="filtre($event)"> Interviews </button>
+            <button title="Rapping" (click)="filtre($event)"> Rapping </button>
+            <button title="Building" (click)="filtre($event)"> Building </button>
+            <button title="History" (click)="filtre($event)"> History </button>
+            <button title="Computer programming" (click)="filtre($event)"> Computer programming </button>
+            <button title="Coding" (click)="filtre($event)"> Coding </button>
+            <button title="Coding" (click)="filtre($event)"> Inventions </button>
+            <button title="Coding" (click)="filtre($event)"> Experiments </button>
+            
+        </div>
+        <div *ngIf="videos.length > 0" id="videos">
+            <div [routerLink]='"watch/"+video.id' class="video" *ngFor="let video of videos">
+                <img id="video-Img" [src]="video.videoImg" alt="">
+                <div class="video-info">
+                    <div class="img-perfil">
+                        <img id="img-User" [src]="video.userImg" alt="">
+                    </div>
+                    <div class="info-text">
+                        <h1>{{ video.videoName }}</h1>
+                        <h1 class="gray">{{ video.userName }}</h1>
+                        <div class="viewtime">
+                            <h1 class="gray">
+                                {{ video.views | shortNumber}} views -
+                            </h1>
+                            <h1 class="gray">
+                                {{ video.time | dateAgo }}
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="videos.length == 0" id="videos">
+            <div  class="video-no-found">
+                <h2> No videos found </h2>
+            
+            <h2> :(</h2>
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>
