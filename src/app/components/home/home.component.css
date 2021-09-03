@@ -171,5 +171,32 @@
   .menuFiltre {
     flex-basis: 100%;
   }
+  
+}
+
+
+@media only screen and (max-width: 650px) {
+  #aside {
+    display: none;
+  }
+  .menuFiltre {
+    flex-basis: 100%;
+  }
+  .video {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    cursor: pointer;
+  }
+  
+  .video #video-Img {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 44mm;
+    max-height: 44mm;
+    transition: all 100ms;
+  }
+  
 }
 

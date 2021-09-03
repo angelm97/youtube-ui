@@ -60,7 +60,7 @@
 #icons {
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
+  justify-content: spac;
 }
 
 #icons .icon {
@@ -525,6 +525,26 @@ hr {
     width: 50px !important;
     height: 30px !important;
     
+  }
+
+  #header img {
+    width: 95px;
+    height: 23px;
+    margin: 0px !important; 
+    margin-left: 23px;
+    cursor: pointer;
+  }
+
+  #icons {
+    display: flex;
+    flex-flow: row;
+    width: 61%;
+    margin: 0px !important;
+    justify-content: space-between !important;
+  }
+
+  .ml{
+   margin-left: 2px; 
   }
 
 }
